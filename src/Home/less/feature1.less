@@ -1,0 +1,99 @@
+@content1: content1;
+.@{content1}-wrapper {
+  height: 360px;
+  .@{content1} {
+    height: 100%;
+    padding: 0 24px;
+    &-img {
+      height: 100%;
+      transform-origin: top;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        display: block;
+        width: 250px;
+        img {
+          display: block;
+        }
+      }
+    }
+    &-text {
+      padding: 0 32px;
+      height: 100%;
+      .@{content1}-content,
+      .@{content1}-title {
+        position: relative !important;
+      }
+      .@{content1}-title {
+        font-size: 32px;
+        font-weight: normal;
+        color: #404040;
+        margin-top: 120px;
+      }
+      .content {
+        margin-top: 20px;
+      }
+    }
+  }
+  .button {
+    box-shadow: 0 8px 16px #0554b7;
+    background: linear-gradient(to right, #05cbff, #1e5aff) !important;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    border: 0;
+    border-radius: 21px;
+    color: #fff;
+    width: 128px;
+    padding: 0 15px;
+    margin-top: 15px;
+    display: inline-block;
+    transition: transform .3s, box-shadow .3s;
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 20px #0554b7;
+    }
+    &:active {
+      transform: translateY(4px);
+      box-shadow: 0 4px 8px #0554b7;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .@{content1}-wrapper {
+    height: 600px;
+    .@{content1} {
+      &-img {
+        height: 200px;
+        padding: 0;
+        text-align: center;
+        margin-top: 64px;
+        span {
+          display: inline-block;
+          width: 180px;
+          height: 200px;
+          line-height: 200px;
+          margin: auto;
+        }
+      }
+      &-text {
+        height: auto;
+        margin-bottom: 20px;
+        text-align: center;
+        padding: 0;
+        .@{content1}-content,
+        .@{content1}-title {
+          width: 100%;
+          top: auto;
+        }
+        .@{content1}-title {
+          margin: 32px auto 16px;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
